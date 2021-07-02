@@ -1,0 +1,49 @@
+\documentclass[a4paper, english]{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{siunitx}
+
+\title{Notes on the testing of programs} 
+\author{Prasanta Bandyopadhyay}
+\date{July, 2021}
+
+\begin{document}
+\maketitle
+\pagebreak
+
+\section{Composite Trapezoidal Rule} \footnote{Testing were performed with H.M. Antia book reference}
+
+\begin{itemize}
+\item For this integration, \[\int_0^1 \frac{4 dx}{1+x^2} \approx3.141593 \]
+The  composite trapezoidal rule matches with the book reference.
+\item For this integration, \[\int_{-10}^{10} \frac{ dx}{1+x^2} \approx 2.942255 \]
+The  composite trapezoidal rule matches with the book reference.
+\item For this integration, \[\int_{0}^{1} \sqrt{x} \approx 0.6666667 \]
+The  composite trapezoidal rule have slight mismatch with the book reference. In the book, for n = 1537, value = 0.6666635, while the program shows 0.6666632.
+\item For this integration, \[\int_{0}^{1} \frac{dx}{100 x^{0.99}} \approx 1 \]
+The  composite trapezoidal rule program fails showing error \textit{ZeroDivisionError: float division by zero}
+\item For this integration, \[\int_{0}^{5} e^{-x^2} \approx 0.785398163 \]
+The  composite trapezoidal rule program shows the result as 0.8862269254512815.
+\end{itemize}
+\pagebreak
+
+\section{Composite Simpson1by3 Rule} \footnote{Testing were performed with H.M. Antia book reference}
+
+\begin{itemize}
+\item For this integration, \[\int_0^1 \frac{4 dx}{1+x^2} \approx3.141593 \]
+The  composite trapezoidal rule matches with the book reference.
+\item For this integration, \[\int_{-10}^{10} \frac{ dx}{1+x^2} \approx 2.942255 \]
+The  composite trapezoidal rule matches with the book reference.
+\item For this integration, \[\int_{0}^{1} \sqrt{x} \approx 0.6666667 \]
+The  composite trapezoidal rule have slight mismatch with the book reference. In the book, for n = 1537, value = 0.6666635, while the program shows 0.6666632.
+\item For this integration, \[\int_{0}^{1} \frac{dx}{100 x^{0.99}} \approx 1 \]
+The  composite trapezoidal rule program fails showing error \textit{ZeroDivisionError: float division by zero}
+\item For this integration, \[\int_{0}^{5} e^{-x^2} \approx 0.785398163 \]
+The  composite trapezoidal rule program shows the result as 0.8862269254512815.
+\end{itemize}
+
+\end{document}
